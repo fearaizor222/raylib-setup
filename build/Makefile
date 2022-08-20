@@ -1,2 +1,8 @@
-default:
-	g++ ../main.cpp -o test.exe -O2 -Wall -Wno-missing-braces -I ../include/ -L ../lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+output: main.o
+	g++ main.o -o output -I ./include/ -L ./lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+	
+main.o: main.cpp
+	g++ -c main.cpp
+
+clean:
+	del /s *.o output.exe
