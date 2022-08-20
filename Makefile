@@ -5,4 +5,4 @@ main.o: main.cpp
 	g++ -c main.cpp
 
 clean:
-	del /s *.o output.exe
+	rm *.o output.exe
